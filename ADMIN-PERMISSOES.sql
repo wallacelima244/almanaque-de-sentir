@@ -1,0 +1,9 @@
+-- Permissões do painel de administração. JÁ APLICADAS ao projeto Almanaque de Sentir.
+-- Projeto: ilpkqlhdulhjabgaqmgo
+-- O login do usuário é feito pelo Supabase Auth; ninguém vira admin automaticamente.
+-- Para autorizar sua mãe: crie a conta em Authentication > Users e depois substitua
+-- 'EMAIL_DA_ADMINISTRADORA' pelo e-mail exato dela na instrução abaixo.
+-- INSERT INTO public.admin_users(user_id)
+-- SELECT id FROM auth.users WHERE email = 'EMAIL_DA_ADMINISTRADORA'
+-- ON CONFLICT DO NOTHING;
+-- Nunca inclua senha ou service_role em arquivos públicos.

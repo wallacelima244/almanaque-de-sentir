@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 650" role="img" aria-label="Capa de Confiar">
+<defs>
+<linearGradient id="leather" x1="0" x2="1" y1="0" y2=".15"><stop stop-color="#192e2a"/><stop offset=".5" stop-color="#345b4d"/><stop offset="1" stop-color="#192e2a"/></linearGradient>
+<linearGradient id="foil" x1="0" x2="1" y1="1" y2="0"><stop stop-color="#8f6339"/><stop offset=".35" stop-color="#e8c78e"/><stop offset=".6" stop-color="#ad7845"/><stop offset="1" stop-color="#f0d39e"/></linearGradient>
+<filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".13"/></feComponentTransfer></filter>
+</defs>
+<rect width="480" height="650" rx="10" fill="url(#leather)"/>
+<rect width="480" height="650" filter="url(#grain)" opacity=".65"/>
+<rect x="21" y="20" width="438" height="610" rx="4" fill="none" stroke="url(#foil)" stroke-width="3"/>
+<rect x="30" y="29" width="420" height="592" rx="2" fill="none" stroke="#a67d4d" stroke-width=".75"/>
+<path d="M65 58h350M65 595h350" stroke="#d4a974" stroke-width="1" opacity=".8"/>
+<g transform="translate(0 68)"><g stroke="#d6aa6b" stroke-width="1.25" fill="none" opacity=".77">
+<path d="M115 167 Q173 150 201 103 Q214 82 240 72 Q264 82 278 103 Q313 154 365 167"/><path d="M115 187 Q173 205 201 252 Q214 273 240 283 Q264 273 278 252 Q313 201 365 187"/>
+<path d="M118 165 C148 138 148 111 143 100 C142 127 122 119 108 99 C112 125 111 142 90 147 C105 154 116 151 118 165Z"/>
+<path d="M362 165 C332 138 332 111 337 100 C338 127 358 119 372 99 C368 125 369 142 390 147 C375 154 364 151 362 165Z"/>
+<path d="M118 190 C148 217 148 244 143 255 C142 228 122 236 108 256 C112 230 111 213 90 208 C105 201 116 204 118 190Z"/>
+<path d="M362 190 C332 217 332 244 337 255 C338 228 358 236 372 256 C368 230 369 213 390 208 C375 201 364 204 362 190Z"/>
+<path d="M240 52c-12 27 -22 28 -40 21 16 19 27 29 40 35 13-6 24-16 40-35-18 7-28 6-40-21Z"/>
+<path d="M240 304c-12-27-22-28-40-21 16-19 27-29 40-35 13 6 24 16 40 35-18-7-28-6-40 21Z"/>
+</g><g transform="translate(240 173)">
+<g stroke="#d6aa6b" stroke-width="1.4" fill="none" opacity=".95"><path d="M0 0 C-26-36-35-48-17-68 C-4-77 15-70 7-55 C-2-45-12-55-8-61"/><path d="M0 0 C26-36 35-48 17-68 C4-77-15-70-7-55 C2-45 12-55 8-61"/><path d="M0 0 C-38 6-65-16-58-39 C-53-55-34-45-41-31 C-48-23-52-36-49-39"/><path d="M0 0 C38 6 65-16 58-39 C53-55 34-45 41-31 C48-23 52-36 49-39"/><path d="M0 0 C-21 20-24 52-5 61 C13 67 19 44 5 39 C-3 40-2 51 4 50"/><path d="M0 0 C21 20 24 52 5 61 C-13 67-19 44-5 39 C3 40 2 51-4 50"/></g>
+<path d="M0-24 C-20-24-26-1-12 8 C-24 20-4 35 8 22 C24 33 34 6 17-3 C24-20 7-31 0-24Z" fill="#c39a5b" opacity=".28" stroke="#ddb67e"/><path d="M0-14 C-15-10-14 7-4 10 C-2 24 15 16 15 7 C17-3 3-18 0-14Z" fill="none" stroke="#edcd98" stroke-width="2"/>
+<path d="M-1-10C5-16 13-6 8 2C2 9-5 5-3-1C0-5 7-3 4 0" fill="none" stroke="#f3d39a" stroke-width="2"/>
+</g></g>
+<text x="240" y="76" text-anchor="middle" fill="#edcf9b" font-family="Georgia,serif" font-size="12" letter-spacing="3.6">ALMANAQUE DE SENTIR</text>
+<path d="M182 355H298" stroke="#dabb82" stroke-width="1" opacity=".8"/>
+<text x="240" y="382" text-anchor="middle" fill="#e9d0a2" font-family="Georgia,serif" font-size="10.5" letter-spacing="4">PENSAMENTO ESPECIAL</text>
+<text x="240" y="442" text-anchor="middle" fill="#fff0c5" font-family="Georgia,serif" font-size="42" font-style="italic">Confiar</text>
+<text x="240" y="492" text-anchor="middle" fill="#e7c995" font-family="Georgia,serif" font-size="12" letter-spacing="1.5">Frases para acolher a fé</text>
+<path d="M175 523H305" stroke="#bd9361" stroke-width=".8"/>
+<text x="240" y="564" text-anchor="middle" fill="#e1bd83" font-family="Georgia,serif" font-size="11" font-style="italic">A coragem de deixar florescer.</text>
+</svg>

@@ -1,0 +1,121 @@
+ALMANAQUE DE SENTIR · SITE EM HTML / CSS / JS
+===============================================
+
+VERSÃO VISUAL DA LOJA: PRONTA PARA PUBLICAR E RECEBER VISITANTES.
+PAGAMENTOS E ENTREGA AUTOMÁTICA: AINDA DESATIVADOS POR SEGURANÇA.
+
+01. COMO USAR NO VS CODE
+  1. Extraia este ZIP para uma pasta no seu computador.
+  2. Abra a pasta no VS Code.
+  3. Abra index.html com a extensão Live Server.
+  4. Não precisa de npm, Next.js ou React.
+
+02. COMO ENVIAR AO GITHUB
+  1. Entre no repositório do Almanaque, em Add file > Upload files.
+  2. Selecione TODOS os arquivos deste ZIP e envie juntos.
+  3. Todos estão na raiz, SEM SUBPASTAS.
+  4. No Vercel, configure como projeto estático (sem build/npm).
+
+03. O E-BOOK ESTÁ IMPLEMENTADO NA PÁGINA
+  - Nova seção de vendas com a CAPA REAL da edição guiada.
+  - Apresentação das 75 páginas, 30 capítulos, 30 gestos e 90 perguntas.
+  - Fotos de DUAS PÁGINAS REAIS do livro.
+  - Botão funcional para ler e baixar AMOSTRA GRATUITA do livro de 75 páginas.
+  - Produto do e-book listado na vitrine por R$ 24,90, mas não cobra até ativar checkout.
+  - O arquivo completo NÃO ESTÁ neste ZIP. Isso evita distribuí-lo pelo GitHub.
+
+04. OS OUTROS TRÊS PRODUTOS
+  - Pensamento Especial: Confiar: R$ 2,99 (PDF 2 páginas).
+  - Pensamento Especial: Virada: R$ 2,99 (PDF 2 páginas).
+  - Pensamentos para a Alma: R$ 14,90 (PDF 15 páginas com 12 reflexões e práticas).
+  - O e-book de 30 dias tem 75 páginas (produto 30 Dias para Sentir e Refletir).
+  - Os QUATRO PDFs completos estão em OUTRO ZIP chamado
+    Almanaque_de_Sentir_PRODUTOS_PRIVADOS.zip.
+  - NUNCA envie esse outro ZIP nem os PDFs completos para o repositório público.
+
+05. SUPABASE
+  Projeto: ilpkqlhdulhjabgaqmgo
+  URL: https://supabase.com/dashboard/project/ilpkqlhdulhjabgaqmgo
+  - Categorias, pensamentos, produtos e avaliações reais com moderação já cadastrados.
+  - Bucket PRIVADO de produtos digitais já criado: almanaque-produtos.
+  - Preços no banco: 299, 299, 1490 e 2490 centavos.
+  - Itens estão INATIVOS PARA VENDA, deliberadamente.
+  - Dados de pagamento NÃO são guardados no navegador.
+
+06. CONFIGURAR O PAINEL ADMINISTRATIVO
+  1. No painel Supabase, acesse Authentication > Users.
+  2. Crie/convide a conta de login da responsável pelo site.
+  3. Copie o UUID (ID do usuário) criado no Supabase Auth.
+  4. No SQL Editor, execute este comando, SUBSTITUINDO pelo UUID real:
+
+     insert into public.admin_users (user_id)
+     values ('COLE_AQUI_O_UUID_REAL')
+     on conflict (user_id) do nothing;
+
+  5. Acesse admin.html e entre com e-mail e senha.
+  6. Na aba Produtos, use 'Arquivos privados dos produtos'.
+  7. Escolha cada produto e seu PDF correspondente no ZIP privado.
+  8. Clique em 'Enviar PDF com proteção' para guardá-lo no bucket privado.
+  9. O administrador poderá conferir o download privado do arquivo.
+
+  IMPORTANTE: O painel não cadastra usuários públicos por segurança.
+  A tabela admin_users está vazia até a conta responsável ser autorizada.
+
+07. PAGAMENTOS: O QUE FALTA PARA PODER VENDER
+  - Criar/configurar a integração oficial do Mercado Pago da responsável.
+  - Backend seguro (Supabase Edge Function ou Vercel Functions) para gerar checkout.
+  - Webhook para confirmar pagamento APROVADO no Mercado Pago.
+  - Validar valor/id do produto no servidor, não confiar em valor do navegador.
+  - Entregar acesso temporário ao PDF no bucket privado após aprovação.
+  - Testar pagamento aprovado, recusado, cancelado, reembolso e reenvio de acesso.
+  - Criar política de atendimento de reembolso com canal de contato verificável.
+  - Somente após tudo isso, marcar os produtos ativos no painel e definir
+    CHECKOUT_ENDPOINT em config.js.
+
+  NUNCA coloque tokens do Mercado Pago nem chave SERVICE_ROLE no config.js!
+  NÃO crie um link público permanente para PDFs completos.
+
+08. O QUE TEM DE MARKETING NA PÁGINA
+  - Abertura do primeiro pensamento grátis, com escrita e pena vetorial.
+  - Convite de continuação depois da leitura.
+  - E-book com capa, benefícios detalhados, amostra e preço.
+  - Vitrine em cards com fotos reais de capas, sem emojis.
+  - Garantia legal de arrependimento de 7 dias, sem selo falso.
+  - Avaliações com estrelas apenas de visitantes reais, após moderação.
+  - Perguntas frequentes, motivos para comprar e chamadas para ação.
+  - Logo sem @ e sem fotos de pessoas geradas por IA.
+  - Frase compartilhada em arte de pergaminho com rodapé ALMANAQUE DE VIVER.
+
+09. TESTES REALIZADOS
+  - HTML/CSS/JS inspecionados e scripts com sintaxe validada em Node.
+  - Teste de interação via Chromium em desktop, tablet e celular de 390 e 320 px.
+  - Abertura do envelope, produto, amostra, preço e ausência de checkout ativo.
+  - Confirmação da estrutura do bucket privado e ausência de alertas de segurança.
+  - Não foi possível testar um pagamento real, uma conta admin real ou o upload
+    autenticado, porque ainda faltam a conta admin e a integração Mercado Pago.
+
+Almanaque de Sentir · revisão editorial final recomendada com a responsável.
+
+10. ATUALIZAÇÃO DE DESIGN E ANIMAÇÃO DESTA VERSÃO
+  - A imagem genérica que ocupava o topo foi SUBSTITUÍDA pela capa real do
+    e-book e um cartão com trecho e aplicação prática. O objetivo é mostrar
+    imediatamente ao visitante o que existe para ler e comprar.
+  - Logo da mulher coroada com margem de segurança e sem corte da coroa,
+    inclusive no painel admin. Nenhum @ aparece na marca.
+  - Experiência do pergaminho atualizada: ao abrir o envelope, uma pena
+    vetorial desenhada para o Almanaque acompanha a tinta surgindo no papel.
+    A animação é renderizada em Canvas 2D e se adapta à largura da tela;
+    não é emoji nem um simples efeito typewriter.
+  - Os movimentos respeitam a preferência de movimento reduzido do navegador.
+  - Capa do livro com profundidade 3D discreta, amostra clicável,
+    entradas suaves de seções e microinterações em botões e cards.
+  - O primeiro pensamento continua grátis, sem cadastro, antes da oferta.
+  - Não há rostos artificiais, avaliações fabricadas nem notas inventadas.
+  - Referências de teste: a página foi validada em telas de 320, 390, 820
+    e 1440 px, com escrita, clique no selo, filtros, modal e botões.
+
+11. NÃO CONFUNDIR PREPARAÇÃO VISUAL COM PAGAMENTO ATIVO
+  - Esta edição do site é uma VITRINE com experiência gratuita funcional.
+  - O catálogo no Supabase continua com is_active=false até Mercado Pago,
+    webhook de confirmação e entrega dos PDFs privados estarem testados.
+  - Este ZIP não inclui PDFs pagos completos nem chaves secretas.

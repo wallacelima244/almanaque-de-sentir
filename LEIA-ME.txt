@@ -1,0 +1,86 @@
+ALMANAQUE DE SENTIR — VERSÃO SIMPLES (HTML + CSS + JS)
+=========================================================
+
+Esta versão foi preparada especialmente para quem usa VS Code, GitHub e Vercel
+sem Next.js, React, TypeScript, npm install ou subpastas.
+
+1) COMO ABRIR NO VS CODE
+   - Extraia o ZIP.
+   - No VS Code, use Arquivo > Abrir Pasta e selecione a pasta extraída.
+   - Abra index.html com a extensão Live Server (botão Go Live), se tiver.
+     Também pode abrir index.html diretamente no navegador para ver a prévia.
+   - Para alterar textos/efeitos, edite index.html, style.css e script.js.
+   - Não precisa executar npm install ou npm run dev.
+
+2) COMO ENVIAR AO GITHUB SEM SUBPASTAS
+   - Crie um repositório vazio no GitHub.
+   - Abra Add file > Upload files.
+   - Extraia o ZIP antes de enviar.
+   - Selecione TODOS os arquivos de dentro da pasta, não a pasta nem o ZIP.
+   - Arraste os arquivos selecionados para a tela do GitHub e clique em Commit changes.
+   - Todos ficarão na raiz do repositório, lado a lado com index.html.
+
+3) VERCEL
+   - Importe o repositório na Vercel.
+   - Framework Preset: Other (site estático).
+   - Sem comando de build e sem instalação de dependências.
+   - Diretório de saída: raiz do repositório (.) quando solicitado.
+   - Publique. O site abre em index.html automaticamente.
+
+4) O QUE FUNCIONA NESTA VERSÃO
+   - Site mobile/desktop, logo da marca e estética envelhecida com flores vivas.
+   - Menu, categorias, navegação e vitrine.
+   - Envelope que abre e revela um pensamento gratuito.
+   - Pena que acompanha a escrita progressiva da frase.
+   - Sorteio por tema, salvar arte em PNG, compartilhar pelo celular.
+   - Busca de pensamentos gratuitos no Supabase, com textos locais de reserva.
+   - Produtos aparecem como prévia até a loja ser liberada.
+   - Painel admin.html com autenticação do Supabase (ver passo 5).
+
+5) ATIVAR O PAINEL ADMINISTRATIVO
+   - As políticas de segurança necessárias já foram instaladas no Supabase
+     do projeto Almanaque de Sentir.
+   - Abra o Supabase > projeto Almanaque de Sentir > Authentication > Users.
+   - Crie um usuário administrador com e-mail e senha fortes (não publique a senha).
+   - Copie o UUID (ID) do usuário criado.
+   - Abra SQL Editor e execute, substituindo o UUID pelo valor correto:
+
+       insert into public.admin_users(user_id)
+       values ('COLE_AQUI_O_UUID_DO_USUARIO');
+
+   - Abra admin.html no site publicado e entre com esse e-mail e senha.
+   - Apenas usuários na tabela admin_users podem editar dados.
+   - A administração de pedidos é somente leitura; pagamentos não podem ser
+     aprovados manualmente pelo navegador.
+
+6) MERCADO PAGO: NÃO ESTÁ ATIVO AINDA
+   - A conta Mercado Pago da sua mãe ainda precisa ser autorizada.
+   - NÃO coloque Access Token do Mercado Pago, service_role do Supabase
+     ou senhas em config.js, script.js ou no GitHub.
+   - Para links de pagamento MANUAIS, use PAYMENT_LINKS em config.js, mas
+     só depois de combinar uma forma de entrega manual do produto.
+   - Para entrega automática e desbloqueio após pagamento confirmado,
+     será necessária uma função segura no servidor (ex.: Supabase Edge Function).
+     O HTML puro não substitui essa etapa. A integração automática será
+     implementada e testada separadamente, com as credenciais da titular.
+   - Os produtos cadastrados no Supabase estão inativos por segurança.
+
+7) ARQUIVOS
+   index.html        Página principal
+   style.css         Estilo da loja e animações
+   script.js         Pensamentos, sorteio, compartilhamento e vitrine
+   config.js         Chave PÚBLICA do Supabase e opções de checkout
+   admin.html        Login e painel administrativo
+   admin.css         Estilo do painel
+   admin.js          Acesso autorizado ao Supabase
+   logo.jpg          Logo enviada para a marca
+   *.webp            Imagens otimizadas (todas na raiz)
+   ADMIN_RLS_SQL.txt Referência das políticas já aplicadas no Supabase
+
+IMPORTANTE
+   - O conteúdo premium está protegido no banco por RLS.
+   - A ausência de um checkout real impede que qualquer produto seja cobrado
+     automaticamente nesta versão.
+   - Não coloque links de cobrança reais antes de testar a entrega dos arquivos.
+   - Os textos são originais; para citar versículos bíblicos completos, use
+     traduções com direitos de uso adequados.
